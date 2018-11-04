@@ -1,0 +1,6 @@
+【解决ubuntu系统中文输入法问题】
+https://blog.csdn.net/fx_yzjy101/article/details/80243710
+ 【一个用来测试正则表达式的网站】
+https://www.regexpal.com/
+【解决ubuntu系统中文输入法问题】
+https://blog.csdn.net/fx_yzjy101/article/details/80243710
