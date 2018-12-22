@@ -1,0 +1,22 @@
+1、github上找到要下载的项目
+2、点击clone or download 在弹出框中选择use https，复制文本框中的URL
+3、使用git clone url 在本地的Git Bash打开的窗口中粘贴，下载
+
+4、修改本地代码后，提交，首先查看本地的git branch 和git status查看修改的文件
+5、git add 要提交的文件，或者git add * 提交所有的文件
+6、git commit -m  "本次提交的记录文字"
+7、git push -u origin master 将本地修改推送到gitHub中，输入用户名： 和弹出的密码
+
+
+在git push的时候，有时候我们会想办法撤销git commit的内容 
+
+1、找到之前提交的git commit的id 
+git log 
+找到想要撤销的id 
+
+2、git reset –-hard id 
+完成撤销,同时将代码恢复到前一commit_id 对应的版本 
+
+3、git reset id 
+完成Commit命令的撤销，但是不对代码修改进行撤销，可以直接通过git commit 重新提交对本地代码的修改
+
