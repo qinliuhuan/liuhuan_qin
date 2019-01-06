@@ -1,0 +1,42 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+    <!--<meta charset="UTF-8">-->
+    <!--<title>Title</title>-->
+<!--</head>-->
+<!--<body>-->
+
+<!--</body>-->
+<!--</html>-->
+
+{% extends "base.html" %}
+{% block content %}
+
+<form action="" method="post" name="view_bulletin" enctype="multipart/form-data">
+    {{form.hidden_tag()}}
+    <div class="row">
+        <div class="col-lg-10 col-xs-10">
+            {{ render_filed(form.title, size=120)}}
+        </div>
+
+        <div class="col-lg-4 col-xs-10">
+            {{ render_filed(form.source, size=50)}}
+        </div>
+        <div class="col-lg-4 col-xs-10">
+            {{ render_filed(form.author, size=50)}}
+        </div>
+        <div class="col-lg-4 col-xs-10">
+            {{ render_filed(form.dt)}}
+        </div>
+        <div class="col-lg-10 col-xs-10">
+            {{ render_filed(form.content, row="4", cols="120")}}
+        </div>
+        <div class="col-lg-5 col-xs-10">
+            {{render_filed(file.image, accept="image/png")}}
+            <p><input type="submit" value="upload" name="upload">Upload the image with 400X500</p>
+        </div>
+        <p><input type="submit" value="New Notify" name="confirm"></p>
+
+    </div>
+</form>
+{% endblock %}
