@@ -81,7 +81,7 @@ NAMES = (
     ('amy', 7209),
 )
 
-def randNmae():
+def randName():
     pick = list(NAMES)
     while len(pick) > 0:
         yield pick.pop(rrange(len(pick)))
@@ -90,10 +90,10 @@ def randNmae():
 def insert(cur, db):
     if db == 'sqlite':
         cur.executemany("insert into users values(?,?,?)",
-                        [(who, uid, rrange(1, 5)) for who, uid in randNmae()])
+                        [(who, uid, rrange(1, 5)) for who, uid in randName()])
     elif db == 'mysql':
         cur.executemany("insert into users values(%s, %s, %s)",
-                        [(who, uid, rrange(1, 5)) for who, uid in randNmae()])
+                        [(who, uid, rrange(1, 5)) for who, uid in randName()])
 
 getRC = lambda cur: cur.rowcount if hasattr(cur, 'rowcount') else -1
 
